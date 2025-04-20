@@ -679,37 +679,47 @@ body.gpmn-base-load {
     }
 }
 
+/* Đặt nền đen cho toàn bộ trang */
 body {
-    background-color:  #191B24; 
-    color: white; 
-    font-family: Arial, sans-serif; 
+    background-color:  #191B24; /* Nền đen */
+    color: white; /* Chữ màu trắng để dễ đọc trên nền đen */
+    font-family: Arial, sans-serif; /* Chọn phông chữ dễ đọc */
     margin: 0;
     padding: 0;
 }
 
 #h1-text {
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255); /* Đảm bảo màu chữ cho các phần văn bản */
 }
 
+/* Trung tâm hóa nội dung */
 .text-center {
     text-align: center;
     color: rgb(255, 255, 255);
 }
 
+/* Banner thu nhỏ, căn giữa, bo góc */
 #corner-logo {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa theo chiều ngang */
+    width: 30%; /* Thu nhỏ chiều rộng, bạn có thể điều chỉnh % hoặc dùng px */
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa nếu cần */
     z-index: 10000;
 }
 
 #corner-logo img {
-    height: 50px;
-    width: auto;
-    object-fit: contain;
+    width: 100%;
+    height: auto; /* Hoặc đặt chiều cao cụ thể, ví dụ: 80px */
+    object-fit: cover; /* Đảm bảo ảnh tràn và không méo */
     opacity: 0.95;
+    border-radius: 10px; /* Bo góc ảnh, điều chỉnh giá trị px để thay đổi độ bo */
 }
 
+
+
+/* Đảm bảo bản quyền ở dưới cùng trang */
 #copyright-footer {
     position: fixed;
     bottom: 0;
@@ -721,7 +731,6 @@ body {
     padding: 10px 0;
     font-family: sans-serif;
     background-color: #191B24;
-    z-index: 9999;
+    z-index: 9999; /* Đảm bảo không bị che */
 }
-
 
